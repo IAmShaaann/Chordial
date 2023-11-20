@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm start next dev & npx prisma studio --port=4000",
+    "dev": "next dev",
+    "prisma": "npx prisma studio --port=4000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

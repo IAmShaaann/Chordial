@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import { ServerSidebar } from "@/components/server/server-sidebar";
 
 import { redirectToSignIn } from "@clerk/nextjs";
+import { redirect } from "next/navigation";
 
 const ServerIdLayout = async ({
   children,
@@ -27,7 +28,7 @@ const ServerIdLayout = async ({
     },
   });
 
-  if (!server) return redirectToSignIn();
+  if (!server) return redirect("/");
 
   return (
     <div className="h-full">

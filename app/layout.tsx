@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { Poppins } from "next/font/google";
+import { Open_Sans, Poppins } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ModalProvider } from "@/components/providers/modal-provider";
 
-
-const font = Poppins({
+const font = Open_Sans({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
